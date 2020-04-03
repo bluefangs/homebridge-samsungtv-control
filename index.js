@@ -54,7 +54,8 @@ function SamsungTvAccessory(log, config) {
 
     let index = 1;
 
-    this.tvInputService = new Service.InputSource('TV', 'TV')
+    this.tvInputService = new Service.InputSource(null, 'TV')
+        .setCharacteristic(Characteristic.Name, 'TV')
         .setCharacteristic(Characteristic.Identifier, index++)
         .setCharacteristic(Characteristic.ConfiguredName, 'TV')
         .setCharacteristic(Characteristic.CurrentVisibilityState, Characteristic.CurrentVisibilityState.SHOWN)
@@ -140,7 +141,8 @@ SamsungTvAccessory.prototype = {
     createInputService(index, input) {
         this.log.debug('Creating %s with id %s', input.id, index);
 
-        return new Service.InputSource(input.id, input.id)
+        return new Service.InputSource(null, input.id)
+            .setCharacteristic(Characteristic.Name, input.id)
             .setCharacteristic(Characteristic.Identifier, index)
             .setCharacteristic(Characteristic.ConfiguredName, input.id)
             .setCharacteristic(Characteristic.IsConfigured, input.configured ? Characteristic.IsConfigured.CONFIGURED : Characteristic.IsConfigured.NOT_CONFIGURED)

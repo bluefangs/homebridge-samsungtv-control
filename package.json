@@ -8,8 +8,8 @@
     "wake_on_lan": "^1.0.0"
   },
   "devDependencies": {
-    "homebridge": "^0.4.47",
-    "hap-nodejs": "^0.4.48"
+    "homebridge": "^0.4.54-beta.11",
+    "hap-nodejs": "^0.5.8"
   },
   "license": "MIT",
   "keywords": [
