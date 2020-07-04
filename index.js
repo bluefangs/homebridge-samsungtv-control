@@ -72,7 +72,7 @@ function SamsungTvAccessory(log, config) {
         1: this.tvInputService
     };
 
-    config.enabledInputs
+    config.enabledInputs && config.enabledInputs
         .forEach(input => {
             let serviceIndex = index++;
             let inputService = this.createInputService(serviceIndex, input);
