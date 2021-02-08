@@ -54,10 +54,10 @@ function SamsungTvAccessory(log, config) {
 
     let index = 1;
 
-    this.tvInputService = new Service.InputSource(null, 'TV')
-        .setCharacteristic(Characteristic.Name, 'TV')
+    this.tvInputService = new Service.InputSource(null, 'HDMI')
+        .setCharacteristic(Characteristic.Name, 'HDMI')
         .setCharacteristic(Characteristic.Identifier, index++)
-        .setCharacteristic(Characteristic.ConfiguredName, 'TV')
+        .setCharacteristic(Characteristic.ConfiguredName, 'HDMI')
         .setCharacteristic(Characteristic.CurrentVisibilityState, Characteristic.CurrentVisibilityState.SHOWN)
         .setCharacteristic(Characteristic.IsConfigured, Characteristic.IsConfigured.CONFIGURED)
         .setCharacteristic(Characteristic.InputSourceType, Characteristic.InputSourceType.TUNER)
