@@ -54,7 +54,7 @@ function SamsungTvAccessory(log, config) {
 
     let index = 1;
 
-    this.tvInputService = new Service.InputSource(null, 'HDMI')
+    this.tvInputService = new Service.InputSource(null, 'Hathway')
         .setCharacteristic(Characteristic.Name, 'HDMI')
         .setCharacteristic(Characteristic.Identifier, index++)
         .setCharacteristic(Characteristic.ConfiguredName, 'HDMI')
